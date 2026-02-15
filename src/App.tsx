@@ -3,6 +3,9 @@ import './App.css'
 
 function App() {
   const path = window.location.pathname;
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+
   const noBtnRef = useRef<HTMLAnchorElement | null>(null);
 
   const escapeMousePosition = () => {
@@ -42,7 +45,7 @@ function App() {
       <div className="headerBox">
 
         <h2>
-          {path.substring(1) + ","}
+          {params["name"] + ","}
         </h2>
         <h3>Will you be my valentine?</h3>
       </div>
