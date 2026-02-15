@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import './App.css'
 
 function App() {
-  const path = window.location.pathname;
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
 
