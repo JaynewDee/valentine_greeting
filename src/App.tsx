@@ -49,7 +49,7 @@ function App() {
       <div className="headerBox">
 
         <h2>
-          {params["name"] || "Cutie" + ","}
+          {(params["name"] || "Cutie") + ","}
         </h2>
         <h3>Will you be my valentine?</h3>
       </div>
