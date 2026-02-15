@@ -39,22 +39,29 @@ function App() {
     }
   }
 
+  const cry = () => {
+    const audio = new Audio("/ManCrying.mp3");
+    audio.play();
+  };
+
   return (
     <main>
       <div className="headerBox">
 
         <h2>
-          {params["name"] + ","}
+          {params["name"] || "Cutie" + ","}
         </h2>
         <h3>Will you be my valentine?</h3>
       </div>
       <div className="btnBox">
-        <a className="btn btn-5 yesBtn">YES</a>
+        <a className="btn btn-5 yesBtn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">YES</a>
         <a
           className="btn btn-5 noBtn"
           style={{ marginTop: "50px" }}
           ref={noBtnRef}
-          onMouseOver={escapeMousePosition}
+          onMouseOver={() => {
+            escapeMousePosition(); cry();
+          }}
           onTouchStart={escapeMousePosition}
         >NO</a>
       </div>

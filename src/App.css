@@ -9,7 +9,7 @@ overflow: hidden;
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url("/public/roses2.jpg");
+  background-image: url("/roses2.jpg");
   background-size: cover;
   overflow: hidden;
   box-shadow: inset 3px 15px 50px black;
@@ -56,6 +56,12 @@ h3 {
 
 .yesBtn {
   margin-top: -2rem;
+}
+
+.yesBtn:link {
+    text-decoration: inherit;
+    color: white;
+    cursor: pointer;
 }
 
 .noBtn {
